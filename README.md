@@ -9,3 +9,6 @@
 <p>7. Install "nodemon" as a dependencies to run the server automatically</p>
 <p>8. now in package.json file in the scripts object type: <strong>"start": "nodemon index.js"  </strong> and  <strong> "type": "module" </strong> after "main":"index.js"</p>
 <p>9. Now type <strong>"npm start"</strong> command to start the server </p>
+
+ 
+Note: I have also attached <strong>.env<strong/> but always avoid it to upload on github
