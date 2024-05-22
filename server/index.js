@@ -9,7 +9,7 @@ import { userRoutes } from './routes/UserRoutes.js';
 import { router } from './routes/TaskRoute.js';
 
 const server = express();
-const PORT = process.env.PORT  || 3001;
+const PORT = process.env.PORT || 3001;
 
 server.use(express.json());
 
@@ -25,14 +25,14 @@ server.use('/auth', userRoutes);
 server.use('/auth', router);
 
 // Connect to MongoDB
-mongoose
-  .connect('mongodb://127.0.0.1:27017/w3villaDatabase')
-  .then(() => console.log('connected successfully'))
-  .catch((error) => console.log(error));
+const DB = process.env.DB;
 
+mongoose.connect(DB).then(()=> console.log("DataBase Connected")).catch((err)=>{
+    console.log(err);
+})
 // Start the server
 server.listen(PORT, (err) => {
-  if (err) {
+  if (err) {   
     console.error('Error starting server:', err);
     process.exit(1);
   } else {
