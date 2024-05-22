@@ -27,9 +27,12 @@ server.use('/auth', router);
 // Connect to MongoDB
 const DB = process.env.DB;
 
-mongoose.connect(DB).then(()=> console.log("DataBase Connected")).catch((err)=>{
-    console.log(err);
-})
+mongoose.connect(DB, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log("Database Connected"))
+  .catch((err) => {
+    console.log('Error connecting to database:', err);
+  });
+
 // Start the server
 server.listen(PORT, (err) => {
   if (err) {   
