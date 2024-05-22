@@ -1,5 +1,8 @@
 # W3viilaAssignment
 
+# Before running this application you must have cors extension added to your browser
+https://chromewebstore.google.com/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?pli=1
+
 ## Live Demo
 https://taskmanager-mern-krishan.netlify.app/
 
