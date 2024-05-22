@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "../Styles/Signup.css";
 import Axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
+// const url = 'https://w3viilaassignment-5.onrender.com'
+const url = 'http://localhost:3000';
 
 const Signup = () => {
   const [username, setUsername] = useState("");
@@ -12,7 +14,8 @@ const Signup = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    Axios.post("http://localhost:3000/auth", {
+    // Axios.post(`${url}/auth`, {
+    Axios.post(`${url}/auth`, {
       username,
       email,
       password,

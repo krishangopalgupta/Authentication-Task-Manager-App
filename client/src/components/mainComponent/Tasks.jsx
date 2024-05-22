@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "../Styles/Tasks.css"
+const url = 'http://localhost:3000'
+
 
 const Tasks = () => {
   const [tasks, setTasks] = useState([]);
@@ -15,7 +17,7 @@ const Tasks = () => {
     const fetchTasks = async () => {
       try {
         const token = localStorage.getItem("token");
-        const response = await axios.get("http://localhost:3000/auth/tasks", {
+        const response = await axios.get(`${url}/auth/tasks`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setTasks(response.data);
@@ -38,7 +40,7 @@ const Tasks = () => {
     try {
       if (isEditing) {
         const response = await axios.put(
-          `http://localhost:3000/auth/tasks/${currentTask._id}`,
+          `${url}/auth/tasks/${currentTask._id}`,
           currentTask,
           {
             headers: { Authorization: `Bearer ${token}` },
@@ -51,7 +53,7 @@ const Tasks = () => {
         );
       } else {
         const response = await axios.post(
-          "http://localhost:3000/auth/tasks",
+            `${url}/auth/tasks`,
           currentTask,
           {
             headers: { Authorization: `Bearer ${token}` },
@@ -77,7 +79,7 @@ const Tasks = () => {
       const updatedTasks = tasks.filter((task) => task._id !== _id);
       setTasks(updatedTasks);
 
-      await axios.delete(`http://localhost:3000/auth/tasks/${_id}`, {
+      await axios.delete(`${url}/auth/tasks/${_id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
 

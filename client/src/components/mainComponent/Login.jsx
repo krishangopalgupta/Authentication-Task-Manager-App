@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import "../Styles/Signup.css";
 import Axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
+const url = 'http://localhost:3000'
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -13,7 +14,7 @@ const Login = () => {
 Axios.defaults.withCredentials = true;
   const handleSubmit = (e) => {
     e.preventDefault();
-    Axios.post("http://localhost:3000/auth/login", {
+    Axios.post(`${url}/auth/login`, {
       username,
       password,
     })
@@ -43,7 +44,7 @@ Axios.defaults.withCredentials = true;
 
         <button type="submit">Login</button>
         <p>
-          Don't Have an Account? <Link to="/signup">signup</Link>
+          Don't Have an Account? <Link to="/">signup</Link>
         </p>
       </form>
     </div>
