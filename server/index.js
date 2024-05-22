@@ -9,7 +9,7 @@ import { userRoutes } from './routes/UserRoutes.js';
 import { router } from './routes/TaskRoute.js';
 
 const server = express();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT  || 3001;
 
 server.use(express.json());
 
