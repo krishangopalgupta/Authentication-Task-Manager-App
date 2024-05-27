@@ -16,7 +16,7 @@ server.use(express.json());
 // Configure CORS
 server.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://taskmanager-mern-krishan.netlify.app/",
     credentials: true,
   })
 );
