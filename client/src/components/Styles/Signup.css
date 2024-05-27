@@ -1,47 +1,54 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-.form-container{
-  height: 100vh;
+.form-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid red;
+  height: 100vh;
 }
 
-.sign-up-form{
-  width: 30%;
+.sign-up-form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: left;
-  gap: 10px;
-  border-radius: 3px;
-  padding: 1rem;
-  background-color: white;
-  box-shadow: 2px 2px 6px 4px #aeaeae;
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
 }
 
-
-.sign-up-form label{
-  font-size: 1.3rem;
+.sign-up-form h2 {
+  margin-bottom: 20px;
 }
 
-.sign-up-form input{
-  padding: 0.5rem;
+.sign-up-form label {
+  margin-bottom: 5px;
+}
+
+.sign-up-form input {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
   outline: none;
-  font-size: 1.1rem;
 }
 
-.sign-up-form button{
-  color: white;
-  background-color: rgba(0, 0, 255, 0.764);
-  padding: 0.5rem;
-  border-radius: 4px;
-  outline: none;
+.sign-up-form input.error {
+  border-color: red;
+}
+
+.sign-up-form button {
+  padding: 10px;
   border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
   cursor: pointer;
-  font-size: 1.1rem;
+}
+
+.sign-up-form button:hover {
+  background-color: #0056b3;
+}
+
+.sign-up-form p {
+  margin-top: 10px;
+  text-align: center;
 }

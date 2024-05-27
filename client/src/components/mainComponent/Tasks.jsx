@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "../Styles/Tasks.css"
-const url = 'http://localhost:3000'
+const url = 'https://w3viilaassignment-7.onrender.com'
 
 
 const Tasks = () => {

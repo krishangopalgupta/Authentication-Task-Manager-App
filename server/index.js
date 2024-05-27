@@ -1,12 +1,12 @@
-import express from 'express';
-import dotenv from 'dotenv';
-import mongoose from 'mongoose';
-import cors from 'cors';
-import cookieParser from 'cookie-parser';
+import express from "express";
+import dotenv from "dotenv";
+import mongoose from "mongoose";
+import cors from "cors";
+import cookieParser from "cookie-parser";
 
 dotenv.config();
-import { userRoutes } from './routes/UserRoutes.js';
-import { router } from './routes/TaskRoute.js';
+import { userRoutes } from "./routes/UserRoutes.js";
+import { router } from "./routes/TaskRoute.js";
 
 const server = express();
 const PORT = process.env.PORT || 3001;
@@ -14,29 +14,31 @@ const PORT = process.env.PORT || 3001;
 server.use(express.json());
 
 // Configure CORS
-server.use(cors({
-  origin: 'http://localhost:5173',
-  credentials: true,
-}));
+server.use(
+  cors({
+    origin: "http://localhost:5173",
+    credentials: true,
+  })
+);
 
 // Apply routes
 server.use(cookieParser());
-server.use('/auth', userRoutes);
-server.use('/auth', router);
+server.use("/auth", userRoutes);
+server.use("/auth", router);
 
 // Connect to MongoDB
 const DB = process.env.DB;
 
-mongoose.connect(DB, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose
+  .connect(DB)
   .then(() => console.log("Database Connected"))
   .catch((err) => {
-    console.log('Error connecting to database:', err);
+    console.log("Error connecting to database:", err);
   });
 
-
 server.listen(PORT, (err) => {
-  if (err) {   
-    console.error('Error starting server:', err);
+  if (err) {
+    console.error("Error starting server:", err);
     process.exit(1);
   } else {
     console.log(`Server is running at port ${PORT}`);
