@@ -11,15 +11,23 @@ import { router } from "./routes/TaskRoute.js";
 const server = express();
 const PORT = process.env.PORT || 3001;
 
+const corsOptions = {
+  origin: 'https://taskmanager-mern-krishan.netlify.app',
+  optionsSuccessStatus: 200
+};
+
+server.use(cors(corsOptions));
+
+
 server.use(express.json());
 
 // Configure CORS
-server.use(
-  cors({
-    origin: "https://taskmanager-mern-krishan.netlify.app/",
-    credentials: true,
-  })
-);
+// server.use(
+//   cors({
+//     origin: "https://taskmanager-mern-krishan.netlify.app/",
+//     credentials: true,
+//   })
+// );
 
 // Apply routes
 server.use(cookieParser());
