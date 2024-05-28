@@ -3,9 +3,10 @@
 ### Before running this application you must have cors extension added to your browser
 ### cors extension Link https://chromewebstore.google.com/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?pli=1
 
-# Watch Full 1.30 Minute Demo Video
-
-
+# Watch Full 1.30 Minute Demo Video by clicking on the imagee
+<a href="https://www.youtube.com/watch?v=yQAD8sbxXDk">
+    <img src="thumbnail.png" alt="Watch the video" width="300">
+</a>
 
 ## Live Demo
 https://taskmanager-mern-krishan.netlify.app/
