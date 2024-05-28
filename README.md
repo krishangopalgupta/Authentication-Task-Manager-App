@@ -20,3 +20,7 @@ https://taskmanager-mern-krishan.netlify.app/
 
  
 Note: I have also attached <strong>.env<strong/> but always avoid it to upload on github
+
+
+## Tool, Technologies and dependencies
+React.js || React-Router-Dom || Axios || Node.js || jwtwebtoken || cookie-parser || bcrypt || mongoose || Express || MongoDB (Cloud) || Git || GitHub || VsCode
