@@ -3,10 +3,6 @@
 ### Before running this application you must have cors extension added to your browser
 ### cors extension Link https://chromewebstore.google.com/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?pli=1
 
-<video width="600" controls>
-  <source src="../Mern TaskManager App.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
 
 ## Live Demo
 https://taskmanager-mern-krishan.netlify.app/
