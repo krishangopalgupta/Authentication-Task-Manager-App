@@ -8,8 +8,6 @@
     <img src="thumbnail.png" alt="Watch the video" width="300">
 </a>
 
-## Live Demo
-https://taskmanager-mern-krishan.netlify.app/
 
 <p>1. Clone the repository </p>
 <p>2. open the terminal goes to the client directory</p>
